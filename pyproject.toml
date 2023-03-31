@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "flashcards"
+version = "0.1.0"
+description = "This is my app to make learn better"
+authors = ["Exoutia <jhav365@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Django = "^4.1.7"
+yapf = "^0.32.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
