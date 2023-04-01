@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import (ListView, CreateView)
+from django.views.generic import (ListView, CreateView, UpdateView)
 from .models import Card
 from django.urls import reverse_lazy
 
@@ -11,3 +11,6 @@ class CardCreateView(CreateView):
     model = Card
     fields = ["question", "answer", "box"]
     success_url = reverse_lazy("card-create")
+
+class CardUpdateView(CreateView, UpdateView):
+    success_url = reverse_lazy("card-list")
