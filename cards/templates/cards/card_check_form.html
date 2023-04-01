@@ -2,7 +2,7 @@
 
     {% csrf_token %}
     <input  name="card_id" value="{{ card.id }}"/>
-    <input  name="solved" vlaue="{{ solved }}"/>
+    <input  name="solved" value="{{ solved }}"/>
     {% if solved %}
     <input type="submit" value="✅ I know"/>
     {% else %}
