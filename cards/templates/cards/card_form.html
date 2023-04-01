@@ -2,7 +2,11 @@
 
 {% block content %}
 
-    <h2> Create New Card</h2>
+    {% if card %}
+        <h2>Edit card</h2>
+    {% else %}
+        <h2>Create New Card</h2>
+    {% endif %}
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
