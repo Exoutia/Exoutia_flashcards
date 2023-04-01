@@ -1,7 +1,15 @@
 <article>
     <h4>🤔 {{ card.question }}</h4>
+    {% if not check_card %}
     <p>{{ card.answer }}</p>
     <a href="{% url 'card-update' card.id %}" role="button">
-        Edit Card
+        ✏️ Edit Card
     </a>
+    {% else %}
+        <details>
+            <summary>Reveal Answer</summary>
+            <p>{{ card.answer }}</p>
+        </details>
+    {% endif %}
+
 </article>
